@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/InsertDataBase/db.changelog-InsertProject.yaml
+  - changeSet:
+      id: 4
+      author: your_liquibase_username
+      comment: "Create admin user"
+      changes:
+        - insert:
+            tableName: project_entity
+            columns:
+              - column:
+                  name: project_name
+                  value: "PROJECT_ONE"
+              - column:
+                  name: project_status
+                  value: "BACKLOG"
+              - column:
+                  name: release_id
+                  value: 1
+        - insert:
+            tableName: project_entity
+            columns:
+              - column:
+                  name: project_name
+                  value: "PROJECT_TWO"
+              - column:
+                  name: project_status
+                  value: "IN_PROGRESS"
+              - column:
+                  name: release_id
+                  value: 2
+        - insert:
+            tableName: project_entity
+            columns:
+              - column:
+                  name: project_name
+                  value: "PROJECT_THREE"
+              - column:
+                  name: project_status
+                  value: "DONE"
+              - column:
+                  name: release_id
+                  value: 11
+      rollback:
+        - delete:
+            tableName: project_entity
+            where: username in ('PROJECT_ONE', 'guest')
