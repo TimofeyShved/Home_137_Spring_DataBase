@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd
+            http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.2.xsd">
+
+    <include file="db/changelog/CreateDataBase/db.changelog-CreateRelease.yaml" />
+    <include file="db/changelog/CreateDataBase/db.changelog-CreateProject.yaml" />
+    <include file="db/changelog/CreateDataBase/db.changelog-CreateTask.yaml" />
+    <include file="db/changelog/CreateDataBase/db.changelog-CreateUser.yaml" />
+    <include file="db/changelog/CreateDataBase/db.changelog-CreateRole.yaml" />
+
+    <include file="db/changelog/InsertDataBase/db.changelog-InsertRelease.yaml" />
+    <include file="db/changelog/InsertDataBase/db.changelog-InsertProject.yaml" />
+    <include file="db/changelog/InsertDataBase/db.changelog-InsertTask.yaml" />
+    <include file="db/changelog/InsertDataBase/db.changelog-InsertUser.yaml" />
+    <include file="db/changelog/InsertDataBase/db.changelog-InsertRole.yaml" />
+
+    <include file="db/changelog/UpdateDataBase/db.changelog-UpdateUser.sql" />
+
+</databaseChangeLog>
